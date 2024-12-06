@@ -81,6 +81,7 @@
 			<item key="flash_image" weight="15" level="0" text="Flash image" requires="canFlashWithOfgwrite" ><screen module="FlashImage" screen="SelectImage"/></item>
 			<item key="software_update" weight="15" level="0" text="Software update"><screen module="SoftwareUpdate" screen="UpdatePlugin"/></item>
 		</menu>
+	                <item key="multiboot" text="Multiboot image selector" requires="canMultiBoot"><screen module="FlashImage" screen="MultibootSelection">1</screen></item>
 		<menu key="shutdown" text="Standby / restart">
 			<item key="sleep" text="Sleep timer"><screen module="SleepTimerEdit" screen="SleepTimerEdit"/></item>
 			<item key="standby" text="Standby"><screen module="Standby" screen="Standby"/></item>
@@ -90,7 +91,6 @@
 			<item key="restart_enigma" text="Restart enigma" requires="!InDebugMode"><screen module="Standby" screen="TryQuitMainloop">3</screen></item>
 			<item key="restart_enigma" text="Restart enigma in standard mode" requires="InDebugMode"><screen module="Standby" screen="TryQuitMainloop">3</screen></item>
 			<item key="restart_enigma_debug" text="Restart enigma in debug mode" requires="!InDebugMode"><screen module="Standby" screen="TryQuitMainloop">6</screen></item>
-			<item key="multiboot" text="Multiboot image selector" requires="canMultiBoot"><screen module="FlashImage" screen="MultibootSelection">1</screen></item>
 			<item key="deep_standby" text="Deep standby" requires="DeepstandbySupport"><screen module="Standby" screen="TryQuitMainloop">1</screen></item>
 			<item key="deep_standby" text="Shutdown" requires="!DeepstandbySupport"><screen module="Standby" screen="TryQuitMainloop">1</screen></item>
 		</menu>
